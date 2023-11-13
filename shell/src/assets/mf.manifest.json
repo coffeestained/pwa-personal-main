@@ -1,0 +1,32 @@
+// {
+// 	"angularApp": {
+// 		"isActive": true,
+// 		"remoteEntry": "http://localhost:4201/remoteEntry.js",
+// 		"exposedModule": "./RemoteMfeModule",
+// 		"displayName": "RemoteMfe",
+// 		"routePath": "mfe",
+// 		"ngModuleName": "RemoteMfeModule",
+// 		"viaRoute": true,
+// 		"withInPage": false
+// 	},
+// 	"vueApp": {
+// 		"isActive": true,
+// 		"remoteEntry": "http://localhost:4202/remoteEntry.js",
+// 		"exposedModule": "./RemoteMfeModule",
+// 		"displayName": "RemoteMfe",
+// 		"routePath": "mfe",
+// 		"ngModuleName": "RemoteMfeModule",
+// 		"viaRoute": true,
+// 		"withInPage": false
+// 	},
+// 	"reactApp": {
+// 		"isActive": true,
+// 		"remoteEntry": "http://localhost:4203/remoteEntry.js",
+// 		"exposedModule": "./RemoteMfeModule",
+// 		"displayName": "RemoteMfe",
+// 		"routePath": "mfe",
+// 		"ngModuleName": "RemoteMfeModule",
+// 		"viaRoute": true,
+// 		"withInPage": false
+// 	}
+// }

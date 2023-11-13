@@ -1,2 +1,2 @@
 # spa-resume-main
-This is the primary application of the SPA application. This application serves a Vue.js, React and Angular micro-frontends.
+This is the primary application of the SPA application. I am an Angular Architects Webpack Federation Shell Application and this application serves a Vue.js, React and Angular micro-frontends. While my work on this application is unlicensed and I happily want you to use it in any capacity -- I encourage you to do your own due diligence in inspecting the various lower level modules & packages enabling this applications.
