@@ -3,6 +3,7 @@ import { getManifest, loadRemoteModule } from "@angular-architects/module-federa
 import { Routes } from "@angular/router";
 import { CustomManifest } from "./models/module-federation.model";
 import { routes } from "./internal.routes";
+import { PageNotFoundComponent } from "./layout/page-not-found/page-not-found.component";
 
 export function buildRoutes(): Routes {
 
@@ -12,6 +13,8 @@ export function buildRoutes(): Routes {
     }).map(([key, value]) => {
       return {
         path: value.routePath,
+        isNavigation: value.isNavigation,
+        displayName: value.displayName,
         loadChildren: () => loadRemoteModule({
             type: 'manifest',
             remoteName: key,
@@ -23,9 +26,10 @@ export function buildRoutes(): Routes {
     const notFound = [
       {
         path: '**',
-        redirectTo: '',
+        component: PageNotFoundComponent,
       }
-    ]
+    ];
 
-    return [...routes, ...lazyRoutes, ...notFound]
+    const combinedRoutes =  [...routes, ...lazyRoutes, ...notFound];
+    return combinedRoutes;
 }

@@ -12,7 +12,7 @@
 			},
 			"root": "",
 			"sourceRoot": "src",
-			"prefix": "app",
+			"prefix": "shell",
 			"architect": {
 				"build": {
 					"builder": "ngx-build-plus:browser",
@@ -30,8 +30,10 @@
 						"styles": [
 							"src/styles.scss"
 						],
-						"scripts": [],
 						"extraWebpackConfig": "webpack.config.js",
+						"scripts": [
+							"node_modules/@tilliestudios/spa-personal-web-components/index.js"
+						],
 						"commonChunk": false
 					},
 					"configurations": {

@@ -4,6 +4,7 @@ export type CustomRemoteConfig = RemoteConfig & {
     isActive: boolean;
     exposedModule: string;
     displayName?: string;
+    isNavigation?: boolean;
     routePath?: string;
     ngModuleName?: string;
     viaRoute?: boolean;

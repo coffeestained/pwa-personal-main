@@ -1,0 +1,7 @@
+<div *ngFor="let route of routes">
+    <a
+      [routerLink]="route.path"
+      routerLinkActive="active"
+      >{{ route.displayName }}</a
+    >
+</div>
