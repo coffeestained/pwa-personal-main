@@ -1,0 +1,228 @@
+:host
+{
+  transform: scale(.5);
+}
+
+.switch
+{
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  overflow: hidden;
+}
+
+.switch input
+{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider
+{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(146,141,209);
+  background: linear-gradient(90deg, rgba(146,141,209,1) 0%, rgba(185,185,245,1) 35%, rgba(143,168,222,1) 100%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before
+{
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgba(255, 255, 255, .6);
+  -webkit-transition: .4s;
+  transition: .4s;
+  z-index: 2;
+}
+
+input:checked + .slider
+{
+    background: rgb(44,43,56);
+    background: linear-gradient(90deg, rgba(44,43,56,1) 0%, rgba(33,33,59,1) 35%, rgba(34,42,59,1) 100%);
+}
+
+input:checked + .slider:before
+{
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round
+{
+  border-radius: 34px;
+}
+
+.slider.round:before
+{
+  border-radius: 50%;
+}
+
+.lightmode
+{
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  background: #eded8f;
+  z-index: 1;
+  right: 7px;
+  top: 3px;
+  animation: daytimesun forwards 15s infinite;
+  animation-timing-function: linear;
+}
+
+.cloud
+{
+  background-color: rgba(255, 255, 255, .9);
+  background-image: -webkit-linear-gradient(hsla(0,0%,0%,0), hsla(0,0%,0%,.1));
+  border-radius: 1em;
+  box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.5);
+  display: inline-block;
+  height: 1em;
+  left: 50%;
+  margin-left: -1.5em;
+  position: absolute;
+  top: 50%;
+  width: 3em;
+  z-index: 1;
+}
+
+.cloud:after,
+.cloud:before
+{
+  background-color: #fff;
+  content: '';
+  border-radius: 100%;
+  position: absolute;
+}
+
+.cloud:after
+{
+  background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.025));
+  height: 1em;
+  right: .4em;
+  top: -.5em;
+  width: 1em;
+}
+
+.cloud:before
+{
+  background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 50%, hsla(0,0%,0%,.075));
+  height: 1.6em;
+  left: .4em;
+  top: -.75em;
+  width: 1.6em;
+}
+
+@keyframes daytimesun
+{
+  0%
+  {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+  }
+
+  25%
+  {
+    height: 16px;
+    width: 15px;
+    border-radius: 14px;
+  }
+
+  50%
+  {
+    height: 16px;
+    width: 16px;
+    border-radius: 15px;
+  }
+
+  75%
+  {
+    height: 15px;
+    width: 16px;
+    border-radius: 16px;
+  }
+
+  100%
+  {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+  }
+}
+
+.lightmode_cloud {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background: #eded8f;
+    z-index: 1;
+    animation: daytimecloud forwards 25s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes daytimecloud
+{
+  0%
+  {
+    transform: scale(.8);
+    right: 15px;
+    top: 40px;
+    opacity: 1;
+  }
+
+  100%
+  {
+    transform: scale(.95);
+    right: 25px;
+    top: -40px;
+    opacity: .95;
+  }
+}
+
+@function randomNum($min, $max) {
+    $rand: random();
+    $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+    @return $randomNum;
+}
+
+.darkmode {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 34px;
+}
+
+.switch__star {
+  display: block;
+  position: relative;
+  background-color: white;
+}
+
+@for $i from 1 through 10 {
+  .switch__star:nth-child(#{$i}) {
+    top: #{randomNum(0, 30)}px;
+    left: #{randomNum(0, 30)}px;
+    height: #{randomNum(1, 3)}px;
+    width: #{randomNum(1, 3)}px;
+  }
+}

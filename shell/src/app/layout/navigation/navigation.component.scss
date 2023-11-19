@@ -1,3 +1,81 @@
 :host {
     display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+
+    > div {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .header__navigation-options {
+            position: relative;
+            top: 40px;
+        }
+
+        div.header__navigation-option {
+            margin-top: 3px;
+            -webkit-transition: border-color 200ms linear;
+            -ms-transition: border-color 200ms linear;
+            transition: border-color 200ms linear;
+            border-bottom: 3px solid transparent;
+
+            > a {
+                text-decoration: none;
+            }
+        }
+
+        .header__navigation-option--mobile {
+            text-align: right;
+            margin-bottom: 3px;
+            padding: 15px 0px 15px 15px;
+            -webkit-transition: background-color 200ms linear;
+            -ms-transition: background-color 200ms linear;
+            transition: background-color 200ms linear;
+            background-color: transparent;
+        }
+
+        .header__navigation-option--mobile:hover {
+            background-color: rgba(255, 255, 255, .1);
+        }
+
+        div.header__navigation-option:hover {
+            border-bottom: 3px solid var(--theme-text-color-two);
+        }
+    }
+
+    .header__navigation--mobile {
+        flex: 1;
+        justify-content: end;
+        flex-direction: column;
+        align-items: end;
+        margin-right: 5px;
+        height: 24px;
+        position: relative;
+    }
+
+    .header__navigation-toggle--mobile {
+        cursor: pointer;
+        position: absolute;
+    }
+
+    .header__navigation-menu-closed--mobile {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        height: 100vh;
+        max-width: 0%;
+        min-width: 0%;
+        -webkit-transition: all 333ms linear;
+        -ms-transition: all 333ms linear;
+        transition: all 333ms linear;
+        background: var(--theme-gradient);
+    }
+
+    .header__navigation-menu-open--mobile {
+        min-width: 35%;
+        max-width: 50%;
+        z-index: 1;
+    }
 }

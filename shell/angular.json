@@ -31,9 +31,6 @@
 							"src/styles.scss"
 						],
 						"extraWebpackConfig": "webpack.config.js",
-						"scripts": [
-							"node_modules/@tilliestudios/spa-personal-web-components/index.js"
-						],
 						"commonChunk": false
 					},
 					"configurations": {

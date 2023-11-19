@@ -5,6 +5,6 @@ export const routes = [
         path: '',
         component: WelcomeSplashComponent,
         isNavigation: true,
-        displayName: "About"
+        displayName: "Tillie Studios"
     },
 ];

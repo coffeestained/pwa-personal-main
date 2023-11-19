@@ -1,11 +1,14 @@
 
 import { getManifest, loadRemoteModule } from "@angular-architects/module-federation";
-import { Routes } from "@angular/router";
+import { Route } from "@angular/router";
 import { CustomManifest } from "./models/module-federation.model";
 import { routes } from "./internal.routes";
 import { PageNotFoundComponent } from "./layout/page-not-found/page-not-found.component";
 
-export function buildRoutes(): Routes {
+export declare type SpaRoute = Route & { isNavigation?: string, displayName?: string };
+export declare type SpaRoutes = SpaRoute[];
+
+export function buildRoutes(): SpaRoutes {
 
     const lazyRoutes = Object.entries(getManifest<CustomManifest>())
     .filter(([key, value]) => {
@@ -31,5 +34,5 @@ export function buildRoutes(): Routes {
     ];
 
     const combinedRoutes =  [...routes, ...lazyRoutes, ...notFound];
-    return combinedRoutes;
+    return combinedRoutes as SpaRoutes;
 }

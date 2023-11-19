@@ -1,0 +1,12 @@
+<!-- Rounded switch -->
+<label class="switch">
+    <input aria-label="Lightmode Darkmode Toggle" type="checkbox" (change)="toggled()" [(ngModel)]="darkMode">
+    <span class="slider round"></span>
+    <span *ngIf="!darkMode" class="lightmode"></span>
+    <i *ngIf="!darkMode" class="lightmode_cloud cloud"></i>​
+    <span *ngIf="darkMode" class="darkmode">
+        <span *ngFor="let star of [
+            1,2,3,4,5,6,7,8,9,10
+        ]" [ngClass]="'switch__star'"></span>
+    </span>
+</label>

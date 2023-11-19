@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Components } from "spa-personal-web-components";
+import { SpaLogo } from "spa-personal-web-components/dist/custom-elements/spa-logo";
+import { SpaTextLogo } from "spa-personal-web-components/dist/custom-elements/spa-text-logo";
 
 
 @Component({
@@ -8,7 +9,10 @@ import { Components } from "spa-personal-web-components";
   styleUrls: ['./root.component.scss']
 })
 export class RootComponent {
+
   constructor() {
-     console.log(window.customElements)
+    new SpaLogo();
+    new SpaTextLogo();
+     console.log(window.customElements,   new SpaLogo())
   }
 }

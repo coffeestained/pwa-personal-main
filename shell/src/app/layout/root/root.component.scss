@@ -5,3 +5,20 @@
     right: 0;
     bottom: 0;
 }
+
+@keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+::ng-deep {
+    router-outlet + * {
+        display: block;  /* Change display inline to block */
+        animation: fade 1s;
+    }
+}
+

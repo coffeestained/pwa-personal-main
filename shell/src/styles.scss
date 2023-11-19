@@ -1,4 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --theme-text-neutral: #505050;
+    --theme-text-color: #5555ff;
+    --theme-text-color-two: #1fe995;
+    --theme-background-color: rgb(255, 255, 255);
+    --theme-background-color-two: rgb(220, 220, 220);
+    --theme-gradient: linear-gradient(72deg, #5555ff 0%, rgba(153,153,233,1) 35%, rgba(31,233,149,1) 100%);
+}
+
 * {
     font-family: 'Quicksand', sans-serif;
+    transition: color 200ms;
+    transition: background-color 200ms;
+}
+
+body {
+    background-color: var(--theme-background-color);
+    color: var(--theme-text-neutral)
+}
+
+// TODO DARK / LIGHT
+.root__link {
+    cursor: pointer;
+    transition: color 750ms;
+}
+
+.root__theme-link-neutral {
+    color: var(--theme-text-neutral);
+}
+
+.root__theme-link-neutral:hover {
+    filter: brightness(55%);
+}
+
+.root__theme-link {
+    color: var(--theme-text-color);
+}
+
+.root__theme-link:hover {
+    filter: brightness(55%);
+}
+
+.root__theme-link-two {
+    color: var(--theme-text-color-two);
+}
+
+.root__theme-link-two:hover {
+    filter: brightness(55%);
+}
+
+.root__theme-gradient-background {
+    background: var(--theme-gradient);
+}
+
+.root__white-link {
+    color: white;
+}
+
+.root__white-link:hover {
+    color: rgba(white, 0.75);
+}
+
+.root__theme-overlay-text-gradient {
+    background: var(--theme-gradient);
+    background-image: var(--theme-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.root__escape-theme-overlay {
+    background: none;
+    background-image: none;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: initial;
+    -moz-background-clip: border-box;
+    -moz-text-fill-color: initial;
+}
+
+.root__no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.root__theme-color {
+    color: var(--theme-text-color);
+}
+
+.root__theme-color-two {
+    color: var(--theme-text-color-two);
 }
