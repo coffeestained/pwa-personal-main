@@ -1,0 +1,23 @@
+:host {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background: var(--theme-gradient);
+    z-index: 1;
+    flex: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        background: var(--theme-background-color-two);
+        border-radius: 15px;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        margin: 75px;
+        flex: 1;
+    }
+}

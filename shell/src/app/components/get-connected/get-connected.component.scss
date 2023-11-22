@@ -1,0 +1,9 @@
+:host {
+    display: flex;
+    align-items: center;
+
+    > spa-button,
+    > a {
+        margin-right: 15px;
+    }
+}

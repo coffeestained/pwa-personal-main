@@ -1,0 +1,141 @@
+:host {
+    margin-top: 15vh;
+    display: flex;
+    margin-right: 76px;
+    margin-bottom: 15vh;
+
+    .welcome-splash {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+
+        .welcome-splash__section {
+
+            @keyframes blinking {
+                50% {
+                  opacity: 0;
+                }
+            }
+            .terminal__one {
+                color: var(--theme-text-color);
+            }
+            .terminal__two {
+                color: var(--theme-text-color-two);
+            }
+            .terminal__blinking {
+                animation: blinking 1.5s step-start infinite;
+            }
+
+            h1 {
+                margin: 0;
+                opacity: 0;
+                height: 0px;
+                width: 0px;
+            }
+            h2 {
+                font-size: 65px;
+                margin: 0;
+                max-width: 400px;
+            }
+            h3 {
+                font-size: 35px;
+                margin: 0;
+            }
+        }
+
+        .welcome-splash__card {
+            position: relative;
+            min-height: 400px;
+            left: -112.5px;
+            width: calc(100% + 150px);
+            display: flex;
+        }
+
+        .welcome-splash__section-guide {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            .welcome-splash__section-guide-line {
+                flex: 1;
+            }
+
+            .welcome-splash__section-guide-empty {
+                flex: 1;
+            }
+        }
+
+
+        .welcome-splash__section-guide-icon {
+            position: relative;
+
+            &::before {
+                width: 0px;
+                height: 0px;
+                position: absolute;
+                inset: 0;
+                border-radius: 50%;
+                opacity: 30%;
+                left: calc(50% - 2.5px);
+                top: calc(50% - 2.5px);
+            }
+        }
+
+        // Timeline Coloring Section
+        .welcome-splash__section-guide:nth-child(1n) {
+            .welcome-splash__section-guide-icon {
+                &::before {
+                    content: "";
+                    box-shadow: 0px 2px 13px 15px var(--theme-text-color-two);
+                }
+            }
+
+            .welcome-splash__section-guide-line {
+                border-width: 2px;
+                border-style: solid;
+                border-image:
+                  linear-gradient(
+                    to bottom,
+                    var(--theme-text-neutral),
+                    var(--theme-background-color)
+                  ) 1 100%;
+            }
+        }
+
+        .welcome-splash__section-guide:nth-child(5n) {
+            .welcome-splash__section-guide-icon {
+                &::before {
+                    content: "";
+                    box-shadow: 0px 2px 13px 15px var(--theme-text-color);
+                }
+            }
+
+            .welcome-splash__section-guide-line {
+                border-width: 2px;
+                border-style: solid;
+                border-image:
+                  linear-gradient(
+                    to bottom,
+                    var(--theme-background-color),
+                    var(--theme-text-color-two),
+                    var(--theme-background-color)
+                  ) 1 100%;
+            }
+        }
+
+
+        .welcome-splash__section-guide:nth-child(3n) {
+            .welcome-splash__section-guide-icon {
+                &::before {
+                    content: "";
+                    box-shadow: 0px 2px 13px 15px var(--theme-text-color), 0px 2px 5px 5px var(--theme-text-color-two);
+                }
+            }
+
+            .welcome-splash__section-guide-line {
+                border-left: 2px solid black;
+            }
+        }
+    }
+}
+

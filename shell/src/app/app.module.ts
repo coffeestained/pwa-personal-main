@@ -1,6 +1,7 @@
 import { APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { provideAnimations } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { RootComponent } from './layout/root/root.component';
 
@@ -15,6 +16,9 @@ import { LogoComponent } from './layout/logo/logo.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
+import { SolutionsComponent } from './components/solutions/solutions.component';
+import { GetConnectedComponent } from './components/get-connected/get-connected.component';
+import { CardComponent } from './components/welcome-splash/card/card.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,10 @@ import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.com
     RootComponent,
     PageNotFoundComponent,
     LogoComponent,
-    ThemeToggleComponent
+    ThemeToggleComponent,
+    SolutionsComponent,
+    GetConnectedComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +50,7 @@ import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.com
       deps: [ModuleFederationService],
       multi: true,
     },
+    provideAnimations()
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

@@ -1,0 +1,26 @@
+:host {
+    .solutions-header {
+        display: block;
+        font-size: 15px;
+    }
+
+    .solutions-images {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 150px;
+        gap: 50px;
+        align-items: center;
+
+        > img {
+            filter: grayscale(1.0) brightness(1.1);
+
+            &:hover {
+                filter: brightness(1.1);
+            }
+        }
+    }
+
+    #and-more-tooltip {
+        cursor: pointer;
+    }
+}

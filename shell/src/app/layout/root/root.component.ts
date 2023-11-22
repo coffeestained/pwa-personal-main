@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { SpaLogo } from "spa-personal-web-components/dist/custom-elements/spa-logo";
 import { SpaTextLogo } from "spa-personal-web-components/dist/custom-elements/spa-text-logo";
-
+import { SpaTooltip } from "spa-personal-web-components/dist/custom-elements/spa-tooltip";
+import { SpaButton } from "spa-personal-web-components/dist/custom-elements/spa-button";
 
 @Component({
   selector: 'shell-root',
@@ -11,8 +12,11 @@ import { SpaTextLogo } from "spa-personal-web-components/dist/custom-elements/sp
 export class RootComponent {
 
   constructor() {
+    // Web Components Loaded
     new SpaLogo();
     new SpaTextLogo();
-     console.log(window.customElements,   new SpaLogo())
+    new SpaTooltip();
+    new SpaButton();
+    // Web Components Loaded
   }
 }

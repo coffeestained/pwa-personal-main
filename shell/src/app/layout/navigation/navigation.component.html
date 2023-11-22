@@ -9,21 +9,27 @@
   </div>
 </div>
 
-<shell-theme-toggle></shell-theme-toggle>
+<shell-theme-toggle style="margin-right: 10px;" *ngIf="!isMobile"></shell-theme-toggle>
 
 <div *ngIf="isMobile" class="header__navigation--mobile" >
   <mat-icon class="root__theme-link header__navigation-toggle--mobile root__theme-overlay-text-gradient" (click)="isMobileToggled = !isMobileToggled;"
     aria-hidden="false" aria-label="Toggle navigation menu" fontIcon="menu"></mat-icon>
-  <ng-container [ngStyle]="{ 'display': isMobileToggled ? 'block' : 'none' }">
+  <ng-container>
     <div class="header__navigation-menu-closed--mobile" [ngClass]="isMobileToggled ? 'header__navigation-menu-open--mobile' : ''">
-      <mat-icon [ngStyle]="{ 'display': isMobileToggled ? 'block' : 'none' }" class="root__theme-link header__navigation-toggle--mobile root__theme-overlay-text-gradient"
-        style="top: 10px; right: 5px;"
-        (click)="isMobileToggled = !isMobileToggled;"
-        aria-hidden="false" aria-label="Toggle navigation menu" fontIcon="close"></mat-icon>
+      <div class="header__navigation-menu-header--mobile">
+        <shell-theme-toggle style="
+          margin-left: 5px;
+          margin-top: 10px;"></shell-theme-toggle>
+        <mat-icon [ngStyle]="{ 'display': isMobileToggled ? 'block' : 'none' }" class="header__navigation-toggle--mobile root__theme-text-for-gradient"
+          style="top: 10px; right: 5px;"
+          (click)="isMobileToggled = !isMobileToggled;"
+          aria-hidden="false" aria-label="Toggle navigation menu" fontIcon="close"></mat-icon>
+      </div>
+
       <div class="header__navigation-options">
         <div class="header__navigation-option header__navigation-option--mobile" *ngFor="let route of routes">
           <a
-            class="root__theme-link-neutral"
+            class="root__theme-text-for-gradient"
             style="padding-right: 10px;"
             [routerLink]="route.path"
             routerLinkActive="active">

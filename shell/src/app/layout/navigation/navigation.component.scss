@@ -23,6 +23,8 @@
 
             > a {
                 text-decoration: none;
+                text-overflow: clip;
+                text-wrap: nowrap;
             }
         }
 
@@ -77,5 +79,9 @@
         min-width: 35%;
         max-width: 50%;
         z-index: 1;
+    }
+
+    .header__navigation-menu-header--mobile {
+        display: flex;
     }
 }

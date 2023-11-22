@@ -1,5 +1,5 @@
 <!-- Rounded switch -->
-<label class="switch">
+<label class="switch" id="triggers-theme-tooltip">
     <input aria-label="Lightmode Darkmode Toggle" type="checkbox" (change)="toggled()" [(ngModel)]="darkMode">
     <span class="slider round"></span>
     <span *ngIf="!darkMode" class="lightmode"></span>
@@ -10,3 +10,10 @@
         ]" [ngClass]="'switch__star'"></span>
     </span>
 </label>
+<spa-tooltip
+    tooltip-alignment="bottom"
+    tooltip-text="Toggle Theme"
+    tooltip-target="triggers-theme-tooltip"
+>
+
+</spa-tooltip>

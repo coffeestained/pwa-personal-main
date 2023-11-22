@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
 :root {
+    --theme-text-for-gradient: #fff;
     --theme-text-neutral: #505050;
     --theme-text-color: #5555ff;
     --theme-text-color-two: #1fe995;
@@ -20,10 +21,32 @@ body {
     color: var(--theme-text-neutral)
 }
 
+a {
+    color: var(--theme-text-neutral);
+
+    transition: color 250ms;
+
+    &:hover {
+        color: var(--theme-text-color-two);
+    }
+
+    &:focus {
+        color: var(--theme-text-color-two);
+    }
+
+    &:active {
+        color: var(--theme-text-color-two);
+    }
+}
+
 // TODO DARK / LIGHT
 .root__link {
     cursor: pointer;
     transition: color 750ms;
+}
+
+.root__theme-text-for-gradient {
+    color: var(--theme-text-for-gradient);
 }
 
 .root__theme-link-neutral {
@@ -97,3 +120,57 @@ body {
 .root__theme-color-two {
     color: var(--theme-text-color-two);
 }
+
+/**
+    Modifiers
+ */
+.m-0 {
+    margin: 0;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+/**
+    Animations
+ */
+ .base__rightInOut {
+    transition: all 500ms;
+    position: relative;
+    opacity: 0;
+    transform: translateX(150px);
+ }
+
+ .active__rightInOut {
+    opacity: 1;
+    transform: translateX(0);
+ }

@@ -1,0 +1,22 @@
+:host {
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    /**
+    Scrollbars
+    */
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--theme-text-neutral);
+        border-radius: 20px;
+        border: 1px solid transparent;
+    }
+}
