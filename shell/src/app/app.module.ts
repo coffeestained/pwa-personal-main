@@ -19,6 +19,7 @@ import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.com
 import { SolutionsComponent } from './components/solutions/solutions.component';
 import { GetConnectedComponent } from './components/get-connected/get-connected.component';
 import { CardComponent } from './components/welcome-splash/card/card.component';
+import { ArchitectureComponent } from './components/architecture/architecture.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CardComponent } from './components/welcome-splash/card/card.component';
     ThemeToggleComponent,
     SolutionsComponent,
     GetConnectedComponent,
-    CardComponent
+    CardComponent,
+    ArchitectureComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,3 @@
-import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { range, concatMap, of, delay } from 'rxjs';
 import { rightInOut } from 'src/app/animations/flyInOut';
@@ -9,7 +8,7 @@ import { rightInOut } from 'src/app/animations/flyInOut';
   styleUrls: ['./get-connected.component.scss'],
   animations: [
     rightInOut
-],
+  ],
 })
 export class GetConnectedComponent implements OnInit {
 

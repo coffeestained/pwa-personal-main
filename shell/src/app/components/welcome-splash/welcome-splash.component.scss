@@ -1,3 +1,5 @@
+@import '../../../styles-constants.scss';
+
 :host {
     margin-top: 15vh;
     display: flex;
@@ -7,6 +9,10 @@
     .welcome-splash {
         display: grid;
         grid-template-columns: 150px 1fr;
+
+        @media screen and (max-width: $small) {
+            grid-template-columns: 75px 1fr;
+        }
 
         .welcome-splash__section {
 
@@ -40,6 +46,26 @@
                 font-size: 35px;
                 margin: 0;
             }
+            @media screen and (max-width: $small) {
+                h1 {
+                    margin: 0;
+                    opacity: 0;
+                    height: 0px;
+                    width: 0px;
+                    padding-right: 40px;
+                }
+                h2 {
+                    font-size: 30px;
+                    margin: 0;
+                    max-width: 400px;
+                    padding-right: 40px;
+                }
+                h3 {
+                    font-size: 15px;
+                    margin: 0;
+                    padding-right: 40px;
+                }
+            }
         }
 
         .welcome-splash__card {
@@ -48,6 +74,18 @@
             left: -112.5px;
             width: calc(100% + 150px);
             display: flex;
+            flex-wrap: wrap;
+
+            @media screen and (max-width: $small) {
+                width: auto;
+                left: -60px;
+            }
+        }
+
+        .welcome-splash__what-we-do {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .welcome-splash__section-guide {
@@ -81,14 +119,30 @@
             }
         }
 
+        .welcome-splash__glow-big {
+            &::before {
+                content: "";
+                box-shadow: 0 2px 120px 140px var(--theme-text-color-two);
+            }
+        }
+
+        .welcome-splash__glow-small {
+            &::before {
+            content: "";
+            box-shadow: 0px 2px 13px 15px var(--theme-text-color-two);
+            }
+        }
+
+        .welcome-splash__section-guide-text {
+            text-align: center;
+
+            @media screen and (max-width: $small) {
+                font-size: 8px;
+            }
+        }
+
         // Timeline Coloring Section
         .welcome-splash__section-guide:nth-child(1n) {
-            .welcome-splash__section-guide-icon {
-                &::before {
-                    content: "";
-                    box-shadow: 0px 2px 13px 15px var(--theme-text-color-two);
-                }
-            }
 
             .welcome-splash__section-guide-line {
                 border-width: 2px;
@@ -102,14 +156,37 @@
             }
         }
 
-        .welcome-splash__section-guide:nth-child(5n) {
-            .welcome-splash__section-guide-icon {
-                &::before {
-                    content: "";
-                    box-shadow: 0px 2px 13px 15px var(--theme-text-color);
-                }
+        .welcome-splash__section-guide:nth-child(5) {
+            .welcome-splash__section-guide-line {
+                border-width: 2px;
+                border-style: solid;
+                border-image:
+                  linear-gradient(
+                    to bottom,
+                    var(--theme-background-color),
+                    var(--theme-text-color),
+                    var(--theme-text-color-two),
+                    var(--theme-background-color)
+                  ) 1 100%;
             }
+        }
 
+        .welcome-splash__section-guide:nth-child(11) {
+            .welcome-splash__section-guide-line {
+                border-width: 2px;
+                border-style: solid;
+                border-image:
+                  linear-gradient(
+                    to bottom,
+                    var(--theme-background-color),
+                    var(--theme-text-color-two),
+                    var(--theme-text-color),
+                    var(--theme-background-color)
+                  ) 1 100%;
+            }
+        }
+
+        .welcome-splash__section-guide:nth-child(13) {
             .welcome-splash__section-guide-line {
                 border-width: 2px;
                 border-style: solid;
@@ -122,19 +199,12 @@
                   ) 1 100%;
             }
         }
+    }
 
 
-        .welcome-splash__section-guide:nth-child(3n) {
-            .welcome-splash__section-guide-icon {
-                &::before {
-                    content: "";
-                    box-shadow: 0px 2px 13px 15px var(--theme-text-color), 0px 2px 5px 5px var(--theme-text-color-two);
-                }
-            }
-
-            .welcome-splash__section-guide-line {
-                border-left: 2px solid black;
-            }
+    .welcome-splash__small-margin {
+        @media screen and (max-width: $small) {
+            margin-left: 37.5px;
         }
     }
 }

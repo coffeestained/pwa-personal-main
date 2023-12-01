@@ -1,0 +1,119 @@
+:host {
+    --border-size: 1px;
+    --dash-size: 4px;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .architecture__arrows {
+        font-size: 30px;
+        width: 30px;
+        margin-left: 25px;
+        margin-bottom: 10px;
+    }
+
+    .architecture__box {
+        background: var(--theme-background-color);
+        position: relative;
+        flex: 1;
+        width: 100%;
+        border-image: repeating-linear-gradient( to right, var(--theme-text-color) 0, var(--theme-text-color) var(--dash-size), transparent var(--dash-size), transparent calc(var(--dash-size) * 2), var(--theme-text-color-two) calc(var(--dash-size) * 2), var(--theme-text-color-two) calc(var(--dash-size) * 3), transparent calc(var(--dash-size) * 3), transparent calc(var(--dash-size) * 4));
+        border-image-slice: 8;
+        border-image-width: var(--border-size) 0;
+
+        &::after {
+            content: "";
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            border-image: repeating-linear-gradient( to bottom, var(--theme-text-color-two) 0, var(--theme-text-color-two)  var(--dash-size), transparent var(--dash-size), transparent calc(var(--dash-size) * 2), var(--theme-text-color) calc(var(--dash-size) * 2), var(--theme-text-color) calc(var(--dash-size) * 3), transparent calc(var(--dash-size) * 3), transparent calc(var(--dash-size) * 4));
+            border-image-slice: 8;
+            border-image-width: 0 var(--border-size);
+        }
+
+        .architecture__box-item {
+            position: relative;
+            padding: 4px;
+            margin: 4px;
+            justify-content: flex-end;
+        }
+
+        .architecture__box-traffic {
+            display: flex;
+            justify-content: space-between;
+
+            > div {
+                display: flex;
+                justify-content: center;
+                width: 60px;
+                margin: 0;
+            }
+        }
+
+        .architecture__box-commons {
+            background-color: var(--theme-background-color);
+        }
+
+        .architecture__box-component {
+            background-color: var(--theme-background-color-two);
+        }
+    }
+
+    .architecture__box-front-end, .architecture__box-application-layer, .architecture__box-back-end {
+        margin: 4px;
+        padding: 3px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        border: 1px solid var(--theme-text-neutral);
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .architecture__box-front-end {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: .2;
+            background: var(--theme-gradient);
+        }
+    }
+
+    .architecture__box-application-layer {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: .2;
+            transform: rotate(180deg);
+            background-color: var(--theme-text-color-two);
+        }
+    }
+
+    .architecture__box-back-end {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: .2;
+            transform: rotate(180deg);
+            background-color: var(--theme-text-color);
+        }
+    }
+}

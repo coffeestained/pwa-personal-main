@@ -23,19 +23,19 @@ export class ThemeService {
   private readonly themes: Record<AvailableThemes, ThemeConfiguration> = {
     Light: {
       "--theme-text-neutral": "#505050",
-      "--theme-text-color": "#5555ff",
+      "--theme-text-color": "#6167af",
       "--theme-text-color-two": "#1fe995",
       "--theme-background-color": "rgb(255, 255, 255)",
       "--theme-background-color-two": "rgb(249, 249, 249)",
-      "--theme-gradient": "linear-gradient(72deg, #5555ff 0%, rgba(153,153,233,1) 35%, rgba(31,233,149,1) 100%)",
+      "--theme-gradient": "linear-gradient(72deg, #6167af 0%, rgba(153,153,233,1) 35%, rgba(31,233,149,1) 100%)",
     },
     Dark: {
       "--theme-text-neutral": "#a7a7a7",
-      "--theme-text-color": "#5555ff",
+      "--theme-text-color": "#6167af",
       "--theme-text-color-two": "#1fe995",
       "--theme-background-color": "#191919",
       "--theme-background-color-two": "#1b1b1b",
-      "--theme-gradient": "linear-gradient(72deg, #5555ff 0%, rgba(153,153,233,1) 35%, rgba(31,233,149,1) 100%)",
+      "--theme-gradient": "linear-gradient(72deg, #6167af 0%, rgba(153,153,233,1) 35%, rgba(31,233,149,1) 100%)",
     }
   };
 

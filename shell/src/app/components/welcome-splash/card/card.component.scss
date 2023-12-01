@@ -20,4 +20,11 @@
         margin: 75px;
         flex: 1;
     }
+
+    .shell__glow-big {
+        &::before {
+            content: "";
+            box-shadow: 0 2px 160px 180px var(--theme-text-color-two);
+        }
+    }
 }

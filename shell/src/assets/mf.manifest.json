@@ -2,11 +2,11 @@
 	"angularApp": {
 		"isActive": true,
 		"remoteEntry": "http://localhost:4201/remoteEntry.js",
-		"exposedModule": "./HomeModule",
-		"displayName": "Home",
+		"exposedModule": "./MapsModule",
+		"displayName": "Maps",
 		"isNavigation": true,
-		"routePath": "home",
-		"ngModuleName": "HomeModule",
+		"routePath": "maps",
+		"ngModuleName": "MapsModule",
 		"viaRoute": true,
 		"withInPage": false
 	}

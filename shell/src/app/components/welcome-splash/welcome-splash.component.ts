@@ -7,25 +7,41 @@ import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren }
 })
 export class WelcomeSplashComponent implements OnInit, AfterViewInit {
 
-  @ViewChildren('intersectSlides') intersectSlides!: QueryList<ElementRef>;
+  @ViewChildren('intersectSlideRight') intersectSlideRight!: QueryList<ElementRef>;
+  private _intersectSlideRightObserver!: IntersectionObserver;
 
-  private _intersectObserver!: IntersectionObserver;
+  @ViewChildren('intersectSlideDown') intersectSlideDown!: QueryList<ElementRef>;
+  private _intersectSlideDownObserver!: IntersectionObserver;
 
   ngOnInit() {
-    this._intersectObserver = new IntersectionObserver(this.handleIntersection);
+    this._intersectSlideRightObserver = new IntersectionObserver(this.handleSlideRightIntersection);
+    this._intersectSlideDownObserver = new IntersectionObserver(this.handleSlideDownIntersection);
   }
 
   ngAfterViewInit() {
-    const elements = Array.from(this.intersectSlides);
-    elements.forEach((element) => this._intersectObserver.observe(element.nativeElement));
+    const rightSlideElements = Array.from(this.intersectSlideRight);
+    rightSlideElements.forEach((element) => this._intersectSlideRightObserver.observe(element.nativeElement));
+
+    const downSlideElements = Array.from(this.intersectSlideDown);
+    downSlideElements.forEach((element) => this._intersectSlideDownObserver.observe(element.nativeElement));
   }
 
-  private handleIntersection(entries: any) {
+  private handleSlideRightIntersection(entries: any) {
     entries.map((entry: any) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active__rightInOut');
       } else {
         entry.target.classList.remove('active__rightInOut');
+      }
+    });
+  }
+
+  private handleSlideDownIntersection(entries: any) {
+    entries.map((entry: any) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active__downInOut');
+      } else {
+        entry.target.classList.remove('active__downInOut');
       }
     });
   }

@@ -1,14 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
 :root {
     --theme-text-for-gradient: #fff;
     --theme-text-neutral: #505050;
-    --theme-text-color: #5555ff;
+    --theme-text-color: #6167af;
     --theme-text-color-two: #1fe995;
     --theme-background-color: rgb(255, 255, 255);
     --theme-background-color-two: rgb(220, 220, 220);
-    --theme-gradient: linear-gradient(72deg, #5555ff 0%, rgba(153,153,233,1) 35%, rgba(31,233,149,1) 100%);
+    --theme-gradient: linear-gradient(72deg, #6167af 0%, rgba(153,153,233,1) 35%, rgba(31,233,149,1) 100%);
 }
+
 
 * {
     font-family: 'Quicksand', sans-serif;
@@ -167,10 +167,22 @@ a {
     transition: all 500ms;
     position: relative;
     opacity: 0;
-    transform: translateX(150px);
+    left: 150px;
  }
 
  .active__rightInOut {
     opacity: 1;
-    transform: translateX(0);
+    left: 0px;
+ }
+
+ .base__downInOut {
+    transition: all 500ms;
+    position: relative;
+    opacity: 0;
+    bottom: 150px;
+ }
+
+ .active__downInOut {
+    opacity: 1;
+    bottom: 0px;
  }

@@ -1,4 +1,7 @@
 :host {
+    width: 80%;
+    display: block;
+
     .solutions-header {
         display: block;
         font-size: 15px;
@@ -10,6 +13,7 @@
         min-height: 150px;
         gap: 50px;
         align-items: center;
+        margin-right: 50px;
 
         > img {
             filter: grayscale(1.0) brightness(1.1);
