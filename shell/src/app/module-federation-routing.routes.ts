@@ -11,7 +11,7 @@ export declare type SpaRoutes = SpaRoute[];
 export function buildRoutes(): SpaRoutes {
 
     const lazyRoutes = Object.entries(getManifest<CustomManifest>())
-    .filter(([key, value]) => {
+    .filter(([_, value]) => {
         return value.viaRoute === true
     }).map(([key, value]) => {
       return {
@@ -22,7 +22,7 @@ export function buildRoutes(): SpaRoutes {
             type: 'manifest',
             remoteName: key,
             exposedModule: value.exposedModule
-        }).then(m => m[value.ngModuleName!])
+        }).then((m) => { console.log(m[value.ngModuleName!]); return m[value.ngModuleName!] })
       }
     });
 
