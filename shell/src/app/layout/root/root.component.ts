@@ -3,6 +3,7 @@ import { SpaLogo } from "spa-personal-web-components/dist/custom-elements/spa-lo
 import { SpaTextLogo } from "spa-personal-web-components/dist/custom-elements/spa-text-logo";
 import { SpaTooltip } from "spa-personal-web-components/dist/custom-elements/spa-tooltip";
 import { SpaButton } from "spa-personal-web-components/dist/custom-elements/spa-button";
+import { ModuleFederationSharedService } from 'src/app/services/module-federation-shared.service';
 
 @Component({
   selector: 'shell-root',
@@ -11,7 +12,7 @@ import { SpaButton } from "spa-personal-web-components/dist/custom-elements/spa-
 })
 export class RootComponent {
 
-  constructor() {
+  constructor(private moduleFederationSharedService: ModuleFederationSharedService) {
     // Web Components Loaded
     new SpaLogo();
     new SpaTextLogo();

@@ -1,0 +1,31 @@
+import { Injectable } from '@angular/core';
+import { SharedService } from 'spa-personal-shared-service';
+import { Observables } from 'spa-personal-shared-service/dist/observable/observable';
+import { Workers } from 'spa-personal-shared-service/dist/worker/worker';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ModuleFederationSharedService {
+
+  registerObservable?: Observables['generateObservable'];
+  destroyObservable?: Observables['destroyObservable'];
+  generateServiceWorker?: Workers['generateServiceWorker'];
+  generateWebWorker?: Workers['generateWebWorker'];
+  terminateServiceWorker?: Workers['terminateServiceWorker'];
+  terminateWebWorker?: Workers['terminateWebWorker'];
+
+  constructor() {
+    new SharedService(window);
+
+    if (window.__SharedService__) {
+      this.registerObservable = window.__SharedService__.classes?.Observables.generateObservable;
+      this.destroyObservable = window.__SharedService__.classes?.Observables.destroyObservable;
+      this.generateServiceWorker = window.__SharedService__.classes?.Workers.generateServiceWorker;
+      this.generateWebWorker = window.__SharedService__.classes?.Workers.generateWebWorker;
+      this.terminateServiceWorker = window.__SharedService__.classes?.Workers.terminateServiceWorker;
+      this.terminateWebWorker = window.__SharedService__.classes?.Workers.terminateWebWorker;
+    }
+  }
+
+}
