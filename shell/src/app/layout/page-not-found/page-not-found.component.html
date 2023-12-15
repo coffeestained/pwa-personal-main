@@ -1,1 +1,22 @@
-<p>page-not-found works!</p>
+<div class="fourzerofour__content">
+  <b>{{ quote.author }}</b>
+  <div class="fourzerofour__quote">
+    <div class="fourzerofour__message">
+      {{ quote.message }}
+    </div>
+    <div class="fourzerofour__quotation root__theme-overlay-text-gradient">
+      "
+    </div>
+  </div>
+  <hr>
+  <small>404 - Not Found</small>
+  <a id="page-not-found-back" href="/"><mat-icon>first_page</mat-icon></a>
+    <spa-tooltip
+    tooltip-alignment="bottom"
+    tooltip-text="Go back"
+    tooltip-target="page-not-found-back"></spa-tooltip>
+</div>
+<div class="fourzerofour__splash">
+  <img class="fourzerofour__space" src="../../../assets/images/404.png">
+  <img class="fourzerofour__astronaut" src="../../../assets/images/404-astronaut.png">
+</div>

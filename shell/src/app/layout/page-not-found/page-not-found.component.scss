@@ -1,0 +1,111 @@
+@import '../../../styles-constants.scss';
+
+:host {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+
+  > div {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  > .fourzerofour__content {
+    max-width: 40%;
+    min-width: 30%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-left: 3rem;
+
+    .fourzerofour__quote {
+      display: flex;
+
+      .fourzerofour__message {
+        display: flex;
+        text-align: right;
+        padding-right: 1.5rem;
+        padding-bottom: 35px;
+        margin-top: 25px;
+        flex: 4
+      }
+
+      .fourzerofour__quotation {
+        display: flex;
+        font-size: 100px;
+      }
+    }
+  }
+
+  > .fourzerofour__splash {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+
+    > img {
+      position: absolute;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+
+    > .fourzerofour__space {
+      animation: space 1400s infinite;
+    }
+
+    > .fourzerofour__astronaut {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      max-width: 150px;
+      filter: opacity(.8) drop-shadow(0 0 0 purple);
+      animation: astronaut 50s infinite;
+
+      @media screen and (max-width: $medium) {
+        width: 130px;
+      }
+
+      @media screen and (max-width: $small) {
+        width: 80px;
+      }
+    }
+
+    @keyframes astronaut {
+      0% {
+        transform: skew(0) scaleX(-1);
+        max-width: 150px;
+      }
+      25% {
+        max-width: 160px;
+        transform: skew(-0.02turn, 2deg) scaleX(-1);
+      }
+      50% {
+        transform: skew(0) scaleX(-1);
+        max-width: 170px;
+      }
+      75% {
+        max-width: 160px;
+        transform: skew(0.01turn, -2deg) scaleX(-1);
+      }
+      100% {
+        transform: skew(0) scaleX(-1);
+        max-width: 150px;
+      }
+    }
+
+    @keyframes space {
+      0% {
+        transform: scale(1) rotate(0deg);
+      }
+      50% {
+        transform: scale(.98) rotate(180deg);
+      }
+      100% {
+        transform: scale(1) rotate(359deg);
+      }
+    }
+  }
+}

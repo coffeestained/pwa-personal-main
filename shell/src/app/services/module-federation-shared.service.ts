@@ -25,7 +25,14 @@ export class ModuleFederationSharedService {
       this.generateWebWorker = window.__SharedService__.classes?.Workers.generateWebWorker;
       this.terminateServiceWorker = window.__SharedService__.classes?.Workers.terminateServiceWorker;
       this.terminateWebWorker = window.__SharedService__.classes?.Workers.terminateWebWorker;
+
+      // Init
+      this.init();
     }
   }
 
+  private init() {
+    const serviceWorker = (this.generateServiceWorker as any)('service-worker', '../../assets/service-worker/service-worker.js')
+    console.log(serviceWorker)
+  }
 }
