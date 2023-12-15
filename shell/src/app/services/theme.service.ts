@@ -1,5 +1,6 @@
 import { Injectable, WritableSignal, effect, signal } from '@angular/core';
 import { LocalStorageService } from './local-storage-library.service';
+import { BehaviorSubject } from 'rxjs';
 
 export type AvailableThemes =
 | 'Light'
@@ -19,6 +20,7 @@ export interface ThemeConfiguration {
 })
 export class ThemeService {
 
+  private _sharedStateTheme!: BehaviorSubject<string>;
   private currentTheme: WritableSignal<AvailableThemes> = signal("Light");
   private readonly themes: Record<AvailableThemes, ThemeConfiguration> = {
     Light: {
@@ -40,22 +42,32 @@ export class ThemeService {
   };
 
   constructor(private localStorageService: LocalStorageService) {
+    // Runtime Local Storage Check
     const inStorage = this.localStorageService.get('theme');
     if (inStorage) this.currentTheme.set(inStorage as AvailableThemes);
+
+    // Setup Module Federation Shared State Subject
+    this._sharedStateTheme = window.__SharedService__.classes?.Observables.get('theme');
+    if (!this._sharedStateTheme) {
+      window.__SharedService__.classes?.Observables.generateObservable('theme', this.currentTheme());
+      this._sharedStateTheme = window.__SharedService__.classes?.Observables.get('theme');
+    }
+
+    // Signal effect
     effect(() => {
+      // Signal val
       const selected = this.currentTheme();
+
+      // Next Shared State Obs$
+      this._sharedStateTheme.next(selected);
+
+      // To Local Storage
       this.localStorageService.set('theme', selected as AvailableThemes);
+
+      // Apply CSS Vars
       Object.entries(this.themes[selected]).forEach(([key, value]) => {
         document.documentElement.style.setProperty(key, value);
       });
-      // if (newTheme) {
-      //   const validTheme = this.themes[newTheme];
-      // }
-      // console.log(newTheme)
-      // Object.entries(newTheme).forEach(([key, value]) => {
-      //   console.log(key)
-      //   document.documentElement.style.setProperty(key, value);
-      // });
       console.log(`The current theme is: ${this.currentTheme()}`);
     });
   }
