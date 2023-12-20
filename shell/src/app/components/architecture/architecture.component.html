@@ -9,7 +9,7 @@
     top: -21px;
 ">Application architecture.</p>
 <div class="architecture__box">
-    <div class="architecture__box-front-end">
+    <div  SharedDomEvent [type]="'leftIntoView'" class="architecture__box-front-end base__leftIntoView">
         <div style="flex: 1">
             <b>webpack module federation</b>
             <p>framework: <small>Angular v16.2.0</small></p>
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div class="architecture__box-traffic">
+    <div SharedDomEvent [type]="'leftIntoView'" class="architecture__box-traffic base__leftIntoView">
         <div class="architecture__arrows root__theme-overlay-text-gradient">
             ⇅
         </div>
@@ -66,7 +66,7 @@
             ⇅
         </div>
     </div>
-    <div class="architecture__box-application-layer">
+    <div SharedDomEvent [type]="'leftIntoView'" class="architecture__box-application-layer base__leftIntoView">
         <div style="flex: 1">
             <b>node.js gateway</b>
             <p>framework: <small>Node.js v20</small></p>
@@ -100,7 +100,7 @@
             </div>
         </div>
     </div>
-    <div class="architecture__box-traffic">
+    <div SharedDomEvent [type]="'leftIntoView'" class="architecture__box-traffic base__leftIntoView">
         <div class="architecture__arrows root__theme-overlay-text-gradient">
             ⇅
         </div>
@@ -111,7 +111,7 @@
             ⇅
         </div>
     </div>
-    <div class="architecture__box-back-end">
+    <div SharedDomEvent [type]="'leftIntoView'" class="architecture__box-back-end base__leftIntoView">
         <div style="flex: 1">
             <b>mongodb cloud instance</b>
             <p>framework: <small>MongoDB v6.3.2</small></p>

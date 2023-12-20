@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { SharedService } from 'spa-personal-shared-service';
 import { Observables } from 'spa-personal-shared-service/dist/observable/observable';
 import { Workers } from 'spa-personal-shared-service/dist/worker/worker';
+import { Dom } from 'spa-personal-shared-service/dist/dom/dom';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,7 @@ export class ModuleFederationSharedService {
   generateWebWorker?: Workers['generateWebWorker'];
   terminateServiceWorker?: Workers['terminateServiceWorker'];
   terminateWebWorker?: Workers['terminateWebWorker'];
+  registerDomEvent?: Dom['register'];
 
   constructor() {
     new SharedService(window);
@@ -25,6 +27,7 @@ export class ModuleFederationSharedService {
       this.generateWebWorker = window.__SharedService__.classes?.Workers.generateWebWorker;
       this.terminateServiceWorker = window.__SharedService__.classes?.Workers.terminateServiceWorker;
       this.terminateWebWorker = window.__SharedService__.classes?.Workers.terminateWebWorker;
+      this.registerDomEvent = window.__SharedService__.classes?.Dom.register;
 
       // Init
       this.init();

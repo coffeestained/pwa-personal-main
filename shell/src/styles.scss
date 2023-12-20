@@ -21,6 +21,13 @@ body {
     font-family: 'Quicksand', sans-serif;
     transition: color 200ms;
     transition: background-color 200ms;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 body {
@@ -166,30 +173,3 @@ a {
 .mb-50 {
     margin-bottom: 50px;
 }
-
-/**
-    Animations
- */
- .base__rightInOut {
-    transition: all 500ms;
-    position: relative;
-    opacity: 0;
-    left: 150px;
- }
-
- .active__rightInOut {
-    opacity: 1;
-    left: 0px;
- }
-
- .base__downInOut {
-    transition: all 500ms;
-    position: relative;
-    opacity: 0;
-    bottom: 150px;
- }
-
- .active__downInOut {
-    opacity: 1;
-    bottom: 0px;
- }

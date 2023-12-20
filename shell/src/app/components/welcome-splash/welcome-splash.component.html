@@ -1,7 +1,7 @@
 
 <div class="welcome-splash">
     <!-- Section 1 -->
-    <div #intersectSlideDown class="welcome-splash__section-guide base__downInOut">
+    <div SharedDomEvent [type]="'downIntoView'" class="welcome-splash__section-guide base__downIntoView">
         <div class="welcome-splash__section-guide-icon welcome-splash__glow-small">
             <mat-icon>
                 terminal
@@ -26,32 +26,32 @@
     </div>
 
     <!-- Section 2 -->
-    <div #intersectSlideDown class="welcome-splash__section-guide base__downInOut">
+    <div SharedDomEvent [type]="'downIntoView'" class="welcome-splash__section-guide base__downIntoView">
         <div class="welcome-splash__section-guide-empty"></div>
         <div class="welcome-splash__section-guide-text">
             Get Connected
         </div>
         <div class="welcome-splash__section-guide-empty"></div>
     </div>
-    <div #intersectSlideRight class="welcome-splash__section base__rightInOut">
+    <div SharedDomEvent [type]="'leftIntoView'" class="welcome-splash__section base__leftIntoView">
         <shell-get-connected></shell-get-connected>
     </div>
 
     <!-- Section 3 -->
-    <div #intersectSlideDown class="welcome-splash__section-guide base__downInOut">
+    <div SharedDomEvent [type]="'downIntoView'" class="welcome-splash__section-guide base__downIntoView">
         <div class="welcome-splash__section-guide-line"></div>
         <div class="welcome-splash__section-guide-icon welcome-splash__glow-small"></div>
     </div>
-    <div #intersectSlideRight class="welcome-splash__section base__rightInOut">
+    <div SharedDomEvent [type]="'leftIntoView'" class="welcome-splash__section base__leftIntoView">
         <shell-solutions></shell-solutions>
         <hr class="m-0 mb-50">
     </div>
 
     <!-- Section 4 -->
-    <div #intersectSlideDown class="welcome-splash__section-guide base__downInOut">
+    <div SharedDomEvent [type]="'downIntoView'" class="welcome-splash__section-guide base__downIntoView">
         <div class="welcome-splash__section-guide-empty"></div>
     </div>
-    <div #intersectSlideRight class="welcome-splash__section welcome-splash__card base__rightInOut">
+    <div SharedDomEvent [type]="'leftIntoView'" class="welcome-splash__section welcome-splash__card base__leftIntoView">
         <shell-card style="overflow: hidden;">
             <h3>Why</h3>
             <div class="welcome-splash__what-we-do">
@@ -87,11 +87,11 @@
     </div>
 
     <!-- Section 5 -->
-    <div #intersectSlideDown class="welcome-splash__section-guide base__downInOut">
+    <div SharedDomEvent [type]="'downIntoView'" class="welcome-splash__section-guide base__downIntoView">
         <div class="welcome-splash__section-guide-empty"></div>
         <div class="welcome-splash__section-guide-icon welcome-splash__glow-small"></div>
     </div>
-    <div #intersectSlideRight class="welcome-splash__section welcome-splash__card base__rightInOut">
+    <div SharedDomEvent [type]="'leftIntoView'" class="welcome-splash__section welcome-splash__card base__leftIntoView">
         <shell-card style="overflow: hidden;">
             <span class="welcome-splash__glow-big" style="opacity: .2; float: right;"></span>
             <h3>Private Projects</h3>
@@ -111,7 +111,7 @@
     </div>
 
     <!-- Section 6 -->
-    <div #intersectSlideDown class="welcome-splash__section-guide base__downInOut">
+    <div SharedDomEvent [type]="'downIntoView'" class="welcome-splash__section-guide base__downIntoView">
         <div class="welcome-splash__section-guide-line"></div>
         <div style="
             height: 33%;
@@ -123,14 +123,14 @@
             " src="../../../assets/images/woman-with-laptop-icon.png">
         </div>
     </div>
-    <div #intersectSlideRight style="min-height: 350px;" class="welcome-splash__section base__rightInOut">
+    <div SharedDomEvent [type]="'leftIntoView'" style="min-height: 350px;" class="welcome-splash__section base__leftIntoView">
     </div>
 
     <!-- Section 7 -->
-    <div #intersectSlideDown class="welcome-splash__section-guide base__downInOut">
+    <div SharedDomEvent [type]="'downIntoView'" class="welcome-splash__section-guide base__downIntoView">
         <div class="welcome-splash__section-guide-empty"></div>
     </div>
-    <div #intersectSlideRight style="left: -112.5px;" class="welcome-splash__section welcome-splash__card welcome-splash__small-margin">
+    <div SharedDomEvent [type]="'leftIntoView'" style="left: -112.5px;" class="welcome-splash__section welcome-splash__card welcome-splash__small-margin">
         <shell-architecture></shell-architecture>
     </div>
 

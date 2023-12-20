@@ -11,7 +11,6 @@ import { ModuleFederationSharedService } from 'src/app/services/module-federatio
   styleUrls: ['./root.component.scss']
 })
 export class RootComponent {
-
   constructor(private moduleFederationSharedService: ModuleFederationSharedService) {
     // Web Components Loaded
     new SpaLogo();
