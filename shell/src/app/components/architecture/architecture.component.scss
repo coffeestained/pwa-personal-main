@@ -14,24 +14,23 @@
     }
 
     .architecture__box {
-        background: var(--theme-background-color);
         position: relative;
         flex: 1;
         width: 100%;
-        border-image: repeating-linear-gradient( to right, var(--theme-text-color) 0, var(--theme-text-color) var(--dash-size), transparent var(--dash-size), transparent calc(var(--dash-size) * 2), var(--theme-text-color-two) calc(var(--dash-size) * 2), var(--theme-text-color-two) calc(var(--dash-size) * 3), transparent calc(var(--dash-size) * 3), transparent calc(var(--dash-size) * 4));
-        border-image-slice: 8;
-        border-image-width: var(--border-size) 0;
+
+        &::before {
+            content: "";
+            inset: 0;
+            opacity: .1;
+            position: absolute;
+            background-image: url(../../../assets/images/tileOne.jpg);
+            background-size: cover;
+        }
 
         &::after {
             content: "";
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            inset: 0;
             position: absolute;
-            border-image: repeating-linear-gradient( to bottom, var(--theme-text-color-two) 0, var(--theme-text-color-two)  var(--dash-size), transparent var(--dash-size), transparent calc(var(--dash-size) * 2), var(--theme-text-color) calc(var(--dash-size) * 2), var(--theme-text-color) calc(var(--dash-size) * 3), transparent calc(var(--dash-size) * 3), transparent calc(var(--dash-size) * 4));
-            border-image-slice: 8;
-            border-image-width: 0 var(--border-size);
         }
 
         .architecture__box-item {
@@ -85,7 +84,7 @@
             left: 0;
             right: 0;
             opacity: .2;
-            background: var(--theme-gradient);
+            background: var(--theme-background-color);
         }
     }
 
@@ -99,7 +98,7 @@
             right: 0;
             opacity: .2;
             transform: rotate(180deg);
-            background-color: var(--theme-text-color-two);
+            background-color: var(--theme-background-color);
         }
     }
 
@@ -113,7 +112,7 @@
             right: 0;
             opacity: .2;
             transform: rotate(180deg);
-            background-color: var(--theme-text-color);
+            background-color: var(--theme-background-color);
         }
     }
 }
