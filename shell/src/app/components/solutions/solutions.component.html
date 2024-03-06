@@ -15,13 +15,13 @@
     <img *ngIf="show >= 12" alt="GCP Logo" src="./assets/images/gcp-logo.png">
     <img *ngIf="show >= 13" alt="Azure Logo" src="./assets/images/azure-logo.png">
     <img *ngIf="show >= 14" alt="HL7 Logo" src="./assets/images/hl7-fhir-logo.png">
-    <img *ngIf="show >= 15" alt="Esri Suite Logo" src="./assets/images/arcgis-logo.png">
+    <img *ngIf="show >= 15" alt="Esri Suite Logo" src="./assets/images/esri-logo.png">
     <img *ngIf="show >= 16" alt="NGINX Logo" src="./assets/images/nginx-logo.png">
-    <span id="and-more-tooltip"><mat-icon *ngIf="show >= 17" >
-        add_circle
-    </mat-icon></span>
-    <spa-tooltip
-        tooltip-alignment="bottom"
-        tooltip-text="And more"
-        tooltip-target="and-more-tooltip"></spa-tooltip>
+    <div id="and-more-tooltip" class="group flex relative hover:text-theme-green-600">
+        <mat-icon *ngIf="show >= 17" >
+            add_circle
+        </mat-icon>
+        <span class="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
+        -translate-x-1/2 translate-y-full opacity-0 mx-auto">And More</span>
+    </div>
 </div>

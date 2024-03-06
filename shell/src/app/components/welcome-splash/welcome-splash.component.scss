@@ -31,6 +31,21 @@
                 animation: blinking 1.5s step-start infinite;
             }
 
+            .welcome-splash__tile {
+                background-image: url(../../../assets/images/tileFour.jpg);
+                background-size: cover;
+            }
+
+            .welcome-splash__tile_two {
+                background-image: url(../../../assets/images/tileTwo.jpg);
+                background-size: cover;
+            }
+
+            .welcome-splash__tile_three {
+                background-image: url(../../../assets/images/tileThree.jpg);
+                background-size: cover;
+            }
+
             h1 {
                 margin: 0;
                 opacity: 0;
@@ -116,20 +131,6 @@
                 opacity: 30%;
                 left: calc(50% - 2.5px);
                 top: calc(50% - 2.5px);
-            }
-        }
-
-        .welcome-splash__glow-big {
-            &::before {
-                content: "";
-                box-shadow: 0 2px 120px 140px var(--theme-text-color-two);
-            }
-        }
-
-        .welcome-splash__glow-small {
-            &::before {
-            content: "";
-            box-shadow: 0px 2px 13px 15px var(--theme-text-color-two);
             }
         }
 

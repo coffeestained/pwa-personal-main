@@ -2,7 +2,7 @@
 <div class="welcome-splash">
     <!-- Section 1 -->
     <div SharedDomEvent [type]="'downIntoView'" class="welcome-splash__section-guide base__downIntoView">
-        <div class="welcome-splash__section-guide-icon welcome-splash__glow-small">
+        <div class="welcome-splash__section-guide-icon group flex relative hover:text-theme-green-400">
             <mat-icon>
                 terminal
             </mat-icon>
@@ -40,7 +40,7 @@
     <!-- Section 3 -->
     <div SharedDomEvent [type]="'downIntoView'" class="welcome-splash__section-guide base__downIntoView">
         <div class="welcome-splash__section-guide-line"></div>
-        <div class="welcome-splash__section-guide-icon welcome-splash__glow-small"></div>
+        <div class="welcome-splash__section-guide-icon"></div>
     </div>
     <div SharedDomEvent [type]="'leftIntoView'" class="welcome-splash__section base__leftIntoView">
         <shell-solutions></shell-solutions>
@@ -52,7 +52,7 @@
         <div class="welcome-splash__section-guide-empty"></div>
     </div>
     <div SharedDomEvent [type]="'leftIntoView'" class="welcome-splash__section welcome-splash__card base__leftIntoView">
-        <shell-card style="overflow: hidden;">
+        <shell-card style="overflow: hidden;" class="welcome-splash__tile">
             <h3>Why</h3>
             <div class="welcome-splash__what-we-do">
                 <div>
@@ -79,7 +79,7 @@
                         with the work and concepts -- all work we have done in the GitHub is unlicensed. We are in this
                         together.
                     </p>
-                    <span class="welcome-splash__glow-big" style="opacity: .2; position: relative; left: 50%;"></span>
+                    <span style="opacity: .2; position: relative; left: 50%;"></span>
                 </div>
             </div>
 
@@ -89,18 +89,18 @@
     <!-- Section 5 -->
     <div SharedDomEvent [type]="'downIntoView'" class="welcome-splash__section-guide base__downIntoView">
         <div class="welcome-splash__section-guide-empty"></div>
-        <div class="welcome-splash__section-guide-icon welcome-splash__glow-small"></div>
+        <div class="welcome-splash__section-guide-icon"></div>
     </div>
     <div SharedDomEvent [type]="'leftIntoView'" class="welcome-splash__section welcome-splash__card base__leftIntoView">
-        <shell-card style="overflow: hidden;">
-            <span class="welcome-splash__glow-big" style="opacity: .2; float: right;"></span>
-            <h3>Private Projects</h3>
+        <shell-card style="overflow: hidden;" class="welcome-splash__tile_two">
+            <span style="opacity: .2; float: right;"></span>
+            <h3>Employment</h3>
             <ol>
                 <li>CareAI -- Healthcare x AI</li>
             </ol>
         </shell-card>
-        <shell-card style="overflow: hidden;">
-            <span class="welcome-splash__glow-big" style="opacity: .2;"></span>
+        <shell-card style="overflow: hidden;" class="welcome-splash__tile_three">
+            <span style="opacity: .2;"></span>
             <h3>Personal Projects</h3>
             <ol>
                 <li>Webpack module federations</li>
@@ -114,13 +114,11 @@
     <div SharedDomEvent [type]="'downIntoView'" class="welcome-splash__section-guide base__downIntoView">
         <div class="welcome-splash__section-guide-line"></div>
         <div style="
-            height: 33%;
+            height: 5%;
             display: flex;
             justify-content: center;
         " class="welcome-splash__section-guide-icon">
-            <img style="
-                opacity: .5;
-            " src="../../../assets/images/woman-with-laptop-icon.png">
+
         </div>
     </div>
     <div SharedDomEvent [type]="'leftIntoView'" style="min-height: 350px;" class="welcome-splash__section base__leftIntoView">

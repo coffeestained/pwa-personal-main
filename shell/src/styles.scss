@@ -1,14 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
-:root {
-    --theme-text-for-gradient: #fff;
-    --theme-text-neutral: #505050;
-    --theme-text-color: #6167af;
-    --theme-text-color-two: #1fe995;
-    --theme-background-color: rgb(255, 255, 255);
-    --theme-background-color-two: rgb(220, 220, 220);
-    --theme-gradient: linear-gradient(72deg, #6167af 0%, rgba(153,153,233,1) 35%, rgba(31,233,149,1) 100%);
-}
+@import "styles-theme-overrides";
+@import "styles-tailwind";
+@import "./output.scss";
 
+/* You can add global styles to this file, and also import other style files */
 html {
     font-size: 10px;
 }
@@ -133,6 +127,10 @@ a {
 
 .root__theme-color-two {
     color: var(--theme-text-color-two);
+}
+
+.theme__logo {
+    font-family: "Quicksand";
 }
 
 /**

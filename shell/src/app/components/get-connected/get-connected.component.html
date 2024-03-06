@@ -1,11 +1,7 @@
 <a *ngIf="show >= 1" @rightInOut href="https://www.linkedin.com/in/matthew-grady-orlando/" target="_blank">
-    <spa-button class="mt-20 mb-20" text="LinkedIn"></spa-button>
+    <button @rightInOut type="button" class="bg-theme-violet-600 hover:bg-theme-violet-800 text-white font-bold py-2 px-4 rounded mt-20 mb-20">LinkedIn</button>
 </a>
 <a *ngIf="show >= 2" @rightInOut href="https://github.com/coffeestained" target="_blank">
-    <spa-button
-    buttonStyle="primaryStyle" buttonColoring="primaryColor"
-    class="mt-20 mb-20" text="GitHub"></spa-button>
+    <button @rightInOut type="button" class="bg-theme-violet-600 hover:bg-theme-violet-800 text-white font-bold py-2 px-4 rounded mt-20 mb-20">GitHub</button>
 </a>
-<spa-button *ngIf="show >= 3" @rightInOut
-    buttonStyle="secondaryStyle" buttonColoring="secondaryColor"
-    class="mt-20 mb-20" text="Email" (click)="email()"></spa-button>
+<button @rightInOut type="button" class="bg-theme-green-600 hover:bg-theme-green-800 text-white font-bold py-2 px-4 rounded mt-20 mb-20"  text="Email" (click)="email()">GitHub</button>
