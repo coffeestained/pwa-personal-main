@@ -25,12 +25,14 @@
             position: absolute;
             background-image: url(../../../assets/images/tileOne.jpg);
             background-size: cover;
+            pointer-events: none;
         }
 
         &::after {
             content: "";
             inset: 0;
             position: absolute;
+            pointer-events: none;
         }
 
         .architecture__box-item {
@@ -85,6 +87,7 @@
             right: 0;
             opacity: .2;
             background: var(--theme-background-color);
+            pointer-events: none;
         }
     }
 
@@ -99,6 +102,7 @@
             opacity: .2;
             transform: rotate(180deg);
             background-color: var(--theme-background-color);
+            pointer-events: none;
         }
     }
 
@@ -113,6 +117,7 @@
             opacity: .2;
             transform: rotate(180deg);
             background-color: var(--theme-background-color);
+            pointer-events: none;
         }
     }
 }
