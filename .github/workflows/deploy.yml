@@ -25,7 +25,9 @@ jobs:
 
     - name: npm install, build, and test
       run: |
-        npm install
+        cd shell
+        npm ci
+        npx tailwindcss -i ./src/styles-tailwind.scss -o ./src/output.scss
         npm run build --if-present
         npm run test --if-present
 
@@ -56,5 +58,6 @@ jobs:
         username: ${{ secrets.USER }} # User of the server you want to ssh into
 
         script: |
-            rsync -a -v --delete-after dist/* /var/www/shell  
-            echo 'Deployment successful to digital ocean' 
+          ch shell
+          rsync -a -v --delete-after dist/* /var/www/shell  
+          echo 'Deployment successful to digital ocean' 
