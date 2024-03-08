@@ -58,4 +58,5 @@ jobs:
         source: '/home/runner/work/pwa-personal-main/pwa-personal-main' # The directory of the files you want to copy
         target: '/var/www/shell' # The directory you want to copy the files to
         overwrite: true
-        strip_components: 2
+        strip_components: 3
+        rm: true
