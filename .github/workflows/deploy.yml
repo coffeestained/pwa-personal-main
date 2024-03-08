@@ -59,4 +59,3 @@ jobs:
         target: '/var/www' # The directory you want to copy the files to
         overwrite: true
         strip_components: 2
-        rm: true
