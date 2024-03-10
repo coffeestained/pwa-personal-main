@@ -1,7 +1,7 @@
 {
 	"angularApp": {
 		"isActive": true,
-		"remoteEntry": "https://tilliestudios.com/child/angular/remoteEntry.js",
+		"remoteEntry": "https://angular.tilliestudios.com/remoteEntry.js",
 		"exposedModule": "./MapsModule",
 		"displayName": "Maps",
 		"isNavigation": true,
