@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 # Env
-shell/src/assets/mf.mainfest.json
+mf.manifest.json
