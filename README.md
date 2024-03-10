@@ -12,3 +12,7 @@ Consider what permissions it may or may not need with Principle of Least Privile
 - - USER
 - Stage 1: Set environment, install dependencies, build.
 - Stage 2: Clean up environment & artifacts of secrets.
+
+I am using NGINX server side to provide the shell application, the child applications and API.
+
+
