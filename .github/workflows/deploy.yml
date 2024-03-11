@@ -5,13 +5,13 @@ on:
       branches: [ "main" ]
     workflow_dispatch:
   
-  env:
+env:
     NODE_VERSION: '20.x' # set this to the node version to use
   
-  permissions:
+permissions:
     contents: read
   
-  jobs:
+jobs:
     build:
       runs-on: ubuntu-latest
       steps:
