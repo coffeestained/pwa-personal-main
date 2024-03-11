@@ -13,7 +13,9 @@ permissions:
   
 jobs:
     build:
+      # Prod Build
       runs-on: ubuntu-latest
+      environment: prod
       steps:
       - uses: actions/checkout@v3
   
@@ -39,10 +41,12 @@ jobs:
           name: shell-app
           path: shell/dist
   
+    # Prod Build
     deploy:
       permissions:
         contents: none
       runs-on: ubuntu-latest
+      environment: prod
       needs: build
   
       steps:
