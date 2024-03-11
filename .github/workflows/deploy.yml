@@ -26,7 +26,12 @@ jobs:
           cache: 'npm'
       
       - name: Create Children Manifest file
-        run: echo "${{ fromJSON( vars.CHILDREN ) }}" > shell/src/assets/mf.manifest.json
+        id: create-json
+        uses: jsdaniell/create-json@v1.2.3
+        with:
+          name: "mf.manifest.json"
+          json: ${{ vars.CHILDREN }}
+          dir: 'shell/src/assets/'
   
       - name: npm install, build, and test
         run: |
