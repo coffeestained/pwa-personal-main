@@ -21,7 +21,7 @@ export interface ThemeConfiguration {
 export class ThemeService {
 
   private _sharedStateTheme!: BehaviorSubject<string>;
-  private currentTheme: WritableSignal<AvailableThemes> = signal("Light");
+  private currentTheme: WritableSignal<AvailableThemes> = signal("Dark");
   private readonly themes: Record<AvailableThemes, ThemeConfiguration> = {
     Light: {
       "--theme-text-neutral": "#505050",
