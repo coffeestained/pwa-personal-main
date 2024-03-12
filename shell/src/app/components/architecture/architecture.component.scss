@@ -34,8 +34,9 @@
             position: absolute;
             pointer-events: none;
             background: var(--theme-background-color);
-            opacity: .9; 
+            opacity: .9;
             z-index: 1;
+            border-radius: 15px;
         }
 
         .architecture__box-item {
