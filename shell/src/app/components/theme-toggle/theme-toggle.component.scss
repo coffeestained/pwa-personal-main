@@ -218,6 +218,7 @@ input:checked + .slider:before
 .switch__star:nth-child(1) {
   top: 9px;
   left: 11px;
+  background-color: #827e7e;
 }
 .switch__star:nth-child(2) {
   top: 2px;
@@ -230,6 +231,7 @@ input:checked + .slider:before
 .switch__star:nth-child(4) {
   top: 13px;
   left: 9px;
+  background-color: #9d9d9d;
 }
 .switch__star:nth-child(5) {
   top: 5px;
@@ -242,10 +244,12 @@ input:checked + .slider:before
 .switch__star:nth-child(7) {
   top: 10px;
   left: 2px;
+  background-color: #8a8a8a;
 }
 .switch__star:nth-child(8) {
   top: 11px;
   left: 9px;
+  background-color: #a6a6a6;
 }
 .switch__star:nth-child(9) {
   top: 5px;
@@ -254,4 +258,5 @@ input:checked + .slider:before
 .switch__star:nth-child(10) {
   top: 6px;
   left: 7px;
+  background-color: #939393;
 }
