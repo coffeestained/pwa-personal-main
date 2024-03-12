@@ -68,7 +68,7 @@ export class ThemeService {
       Object.entries(this.themes[selected]).forEach(([key, value]) => {
         document.documentElement.style.setProperty(key, value);
       });
-      console.log(`The current theme is: ${this.currentTheme()}`);
+      console.log(`DEBUG: The current theme is: ${this.currentTheme()}`);
     });
   }
 

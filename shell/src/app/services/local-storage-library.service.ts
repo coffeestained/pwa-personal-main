@@ -11,8 +11,7 @@ type SuccessFailureSet =
 export class LocalStorageService {
 
   constructor() {
-    console.log('Local Storage Init');
-    console.log(localStorage);
+    console.log('DEBUG: Local Storage Init');
   }
 
   public set(key: string, item: any) : SuccessFailureSet {

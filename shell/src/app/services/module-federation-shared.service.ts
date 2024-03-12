@@ -38,6 +38,6 @@ export class ModuleFederationSharedService {
 
   private init() {
     const serviceWorker = (this.generateServiceWorker as any)('service-worker', '../../assets/service-worker/service-worker.js')
-    console.log(serviceWorker)
+    console.log("DEBUG: Service Worker Init", serviceWorker);
   }
 }
