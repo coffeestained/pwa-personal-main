@@ -1,5 +1,6 @@
 
 import { getManifest, loadRemoteModule } from "@angular-architects/module-federation";
+import { WebComponentWrapper, WebComponentWrapperOptions } from '@angular-architects/module-federation-tools';
 import { Route } from "@angular/router";
 import { CustomManifest } from "./models/module-federation.model";
 import { routes } from "./internal.routes";
@@ -11,19 +12,39 @@ export declare type SpaRoutes = SpaRoute[];
 export function buildRoutes(): SpaRoutes {
 
     const lazyRoutes = Object.entries(getManifest<CustomManifest>())
-    .filter(([_, value]) => {
+    .filter(([_, value]: any) => {
         return value.viaRoute === true
-    }).map(([key, value]) => {
-      return {
+    }).map(([key, value]: any) => {
+      const route = {
         path: value.routePath,
         isNavigation: value.isNavigation,
         displayName: value.displayName,
-        loadChildren: () => loadRemoteModule({
-            type: 'manifest',
-            remoteName: key,
-            exposedModule: value.exposedModule
-        }).then((m) => { console.log(m[value.ngModuleName!]); return m[value.ngModuleName!] })
+      } as any;
+
+      if (value.ngModuleName) {
+        const remoteModuleOptions : any = {
+          type: 'manifest',
+          remoteName: key,
+          exposedModule: value.exposedModule,
+        };
+        let loader = () => loadRemoteModule(
+          remoteModuleOptions
+        ).then((m: any) => { 
+          return m[value.ngModuleName!] 
+        });
+        route['loadChildren'] = loader;
+      } else if (value.elementName) {
+        route.component = WebComponentWrapper;
+        route.data = {
+          remoteEntry: value.remoteEntry,
+          remoteName: key,
+          exposedModule: value.exposedModule,
+          elementName: value.elementName,
+        } as WebComponentWrapperOptions;
       }
+
+      console.log(route);
+      return route;
     });
 
     const notFound = [
