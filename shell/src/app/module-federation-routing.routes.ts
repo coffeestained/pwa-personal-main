@@ -42,8 +42,6 @@ export function buildRoutes(): SpaRoutes {
           elementName: value.elementName,
         } as WebComponentWrapperOptions;
       }
-
-      console.log(route);
       return route;
     });
 
