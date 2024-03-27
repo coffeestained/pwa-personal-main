@@ -1,4 +1,5 @@
 const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
+
 const moduleObject = {
   ...withModuleFederationPlugin({
     shared: {
@@ -10,5 +11,5 @@ const moduleObject = {
     scriptType: 'text/javascript'
   }
 }
-console.log(moduleObject);
+
 module.exports = moduleObject;

@@ -41,6 +41,21 @@ export function buildRoutes(): SpaRoutes {
           exposedModule: value.exposedModule,
           elementName: value.elementName,
         } as WebComponentWrapperOptions;
+        Array.isArray(value.children) ? 
+          route.children = value.children.map((child: any) => {
+            return {
+              path: child.routePath,
+              isNavigation: child.isNavigation,
+              displayName: child.displayName,
+              component: WebComponentWrapper,
+              data: {
+                remoteEntry: child.remoteEntry,
+                remoteName: key,
+                exposedModule: child.exposedModule,
+                elementName: child.elementName,
+              } as WebComponentWrapperOptions
+            }
+          }) : null;
       }
       return route;
     });

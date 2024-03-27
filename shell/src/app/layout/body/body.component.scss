@@ -7,21 +7,4 @@
     bottom: 25px;
     right: 0;
     left: 0;
-
-    /**
-    Scrollbars
-    */
-    &::-webkit-scrollbar {
-        width: 4px;
-    }
-
-    &::-webkit-scrollbar-track {
-        background: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: var(--theme-text-neutral);
-        border-radius: 20px;
-        border: 1px solid transparent;
-    }
 }

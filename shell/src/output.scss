@@ -738,6 +738,10 @@ video {
   text-decoration-line: none;
 }
 
+.group:hover .group-hover\:z-50 {
+  z-index: 50;
+}
+
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
