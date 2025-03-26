@@ -1,5 +1,10 @@
 :host {
     position: relative;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 @keyframes rotate {
@@ -9,12 +14,11 @@
 }
 
 .theme__logo {
-    position: relative;
+    position: absolute;
+    inset: 0;
     z-index: 0;
     overflow: hidden;
     padding: 2px;
-    width: 30px;
-    height: 30px;
     display: flex;
 	
 	&::before {
@@ -45,8 +49,6 @@
 }
 
 .theme__logo--text {
-    position: absolute;
-    top: 2px;
-    left: 8px;
+    position: relative;
     font-weight: bolder;
 }
