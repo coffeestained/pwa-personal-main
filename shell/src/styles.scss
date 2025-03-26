@@ -1,11 +1,18 @@
 @import "styles-theme-overrides";
 @import "styles-tailwind";
+@import "styles-constants";
 @import "./output.scss";
 
 /* You can add global styles to this file, and also import other style files */
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+}
+
+@media screen and (max-width: #{$small}) {
+    html {
+        font-size: 11px;
+    }
 }
 
 * {

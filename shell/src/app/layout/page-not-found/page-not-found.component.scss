@@ -64,11 +64,11 @@
       filter: opacity(.8) drop-shadow(0 0 0 purple);
       animation: astronaut 50s infinite;
 
-      @media screen and (max-width: $medium) {
+      @media screen and (max-width: #{$medium}) {
         width: 130px;
       }
 
-      @media screen and (max-width: $small) {
+      @media screen and (max-width: #{$small}) {
         width: 80px;
       }
     }
