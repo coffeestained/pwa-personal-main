@@ -4,7 +4,7 @@
 
 /* You can add global styles to this file, and also import other style files */
 html {
-    font-size: 10px;
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
@@ -51,8 +51,8 @@ body {
 
 a {
     color: var(--theme-text-neutral);
-
     transition: color 250ms;
+    cursor: pointer;
 
     &:hover {
         color: var(--theme-text-color-two);
@@ -150,7 +150,11 @@ a {
 }
 
 .theme__logo {
-    font-family: "Quicksand";
+    font-family: "Quicksand Bold";
+}
+
+b {
+    font-family: "Quicksand Bold";
 }
 
 /**
