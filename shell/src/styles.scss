@@ -51,8 +51,8 @@ body {
 
 a {
     color: var(--theme-text-neutral);
-
     transition: color 250ms;
+    cursor: pointer;
 
     &:hover {
         color: var(--theme-text-color-two);
@@ -150,7 +150,11 @@ a {
 }
 
 .theme__logo {
-    font-family: "Quicksand";
+    font-family: "Quicksand Bold";
+}
+
+b {
+    font-family: "Quicksand Bold";
 }
 
 /**

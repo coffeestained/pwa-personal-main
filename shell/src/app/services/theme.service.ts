@@ -7,6 +7,7 @@ export type AvailableThemes =
 | 'Dark';
 
 export interface ThemeConfiguration {
+  "--theme-text-opposite": string,
   "--theme-text-neutral": string,
   "--theme-text-color": string,
   "--theme-text-color-two": string,
@@ -24,6 +25,7 @@ export class ThemeService {
   private currentTheme: WritableSignal<AvailableThemes> = signal("Dark");
   private readonly themes: Record<AvailableThemes, ThemeConfiguration> = {
     Light: {
+      "--theme-text-opposite": "#000",
       "--theme-text-neutral": "#505050",
       "--theme-text-color": "#6167af",
       "--theme-text-color-two": "#1fe995",
@@ -32,7 +34,8 @@ export class ThemeService {
       "--theme-gradient": "linear-gradient(72deg, #6167af 0%, rgba(153,153,233,1) 35%, rgba(31,233,149,1) 100%)",
     },
     Dark: {
-      "--theme-text-neutral": "#a7a7a7",
+      "--theme-text-opposite": "#fff",
+      "--theme-text-neutral": "#c8c8c8",
       "--theme-text-color": "#6167af",
       "--theme-text-color-two": "#1fe995",
       "--theme-background-color": "#191919",

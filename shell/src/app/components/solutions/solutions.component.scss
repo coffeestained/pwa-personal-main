@@ -16,7 +16,8 @@
         margin-right: 50px;
 
         > img {
-            max-height: 40px;
+            max-height: 80px;
+            width: auto;
             filter: grayscale(1.0) brightness(1.1);
 
             &:hover {
