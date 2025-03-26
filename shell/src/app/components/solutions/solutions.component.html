@@ -3,61 +3,61 @@
 </small>
 <div class="solutions-images mb-50">
     <!-- MySQL -->
-    <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL" >
+    <img *ngIf="show >= 1" src="../../../assets/images/mysql.png" alt="MySQL" >
 
     <!-- MongoDB -->
-    <img src="https://www.mongodb.com/assets/images/global/leaf.png" alt="MongoDB" >
+    <img *ngIf="show >= 2" src="../../../assets/images/mongodb.png" alt="MongoDB" >
 
     <!-- PostgreSQL -->
-    <img src="https://www.postgresql.org/media/img/about/press/elephant.png" alt="PostgreSQL" >
+    <img *ngIf="show >= 3" src="../../../assets/images/postgres.png" alt="PostgreSQL" >
 
     <!-- Node.js -->
-    <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js" >
+    <img *ngIf="show >= 4" src="../../../assets/images/nodejs.png" alt="Node.js" >
 
     <!-- TypeScript -->
-    <img src="https://www.typescriptlang.org/icons/icon-48x48.png" alt="TypeScript" >
+    <img *ngIf="show >= 5" src="../../../assets/images/typescript.png" alt="TypeScript" >
 
     <!-- Python -->
-    <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python" >
+    <img *ngIf="show >= 6" src="../../../assets/images/python.png" alt="Python" >
 
     <!-- C# -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C#" >
+    <img *ngIf="show >= 7" src="../../../assets/images/cpp.png" alt="C#" >
 
     <!-- .NET Core -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg" alt=".NET Core" >
+    <img *ngIf="show >= 8" src="../../../assets/images/dotnet.png" alt=".NET Core" >
 
     <!-- React -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" >
+    <img *ngIf="show >= 9" src="../../../assets/images/react.png" alt="React" >
 
     <!-- Angular -->
-    <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular" >
+    <img *ngIf="show >= 10" src="../../../assets/images/angular.png" alt="Angular" >
 
     <!-- Vue.js -->
-    <img src="https://vuejs.org/images/logo.png" alt="Vue.js" >
+    <img *ngIf="show >= 11" src="../../../assets/images/vue.png" alt="Vue.js" >
 
     <!-- Webpack -->
-    <img src="https://webpack.js.org/assets/icon-square-big.svg" alt="Webpack" >
+    <img *ngIf="show >= 12" src="../../../assets/images/webpack.png" alt="Webpack" >
 
     <!-- Vite -->
-    <img src="https://vitejs.dev/logo.svg" alt="Vite" >
+    <img *ngIf="show >= 13" src="../../../assets/images/vite.png" alt="Vite" >
 
     <!-- AWS -->
-    <img src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" alt="AWS" >
+    <img *ngIf="show >= 14" src="../../../assets/images/aws.png" alt="AWS" >
 
     <!-- Google Cloud Platform -->
-    <img src="https://cloud.google.com/images/cloud-logo.svg" alt="Google Cloud Platform" >
+    <img *ngIf="show >= 15" src="../../../assets/images/gcp.png" alt="Google Cloud Platform" >
 
     <!-- Azure -->
-    <img src="https://azure.microsoft.com/en-us/support/media/azure-support.svg" alt="Azure" >
+    <img *ngIf="show >= 16" src="../../../assets/images/azure.png" alt="Azure" >
 
     <!-- HL7 FHIR -->
-    <img src="https://www.hl7.org/fhir/assets/images/fhir-logo-www.png" alt="HL7 FHIR" >
+    <img *ngIf="show >= 17" src="../../../assets/images/hl7fhir.png" alt="HL7 FHIR" >
 
     <!-- ESRI -->
-    <img src="https://www.esri.com/content/dam/esrisites/en-us/common/icons/esri-globe-logo-1200x630.png" alt="ESRI" >
+    <img *ngIf="show >= 18" src="../../../assets/images/esri.png" alt="ESRI" >
 
     <!-- WebRTC -->
-    <img src="https://webrtc.org/assets/images/webrtc-logo-vert-retro-255x305.png" alt="WebRTC" >
+    <img *ngIf="show >= 19" src="../../../assets/images/webrtc.png" alt="WebRTC" >
     <div id="and-more-tooltip" class="group flex relative hover:text-theme-green-600">
         <mat-icon *ngIf="show >= 17" >
             add_circle

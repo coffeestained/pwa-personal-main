@@ -12,7 +12,7 @@ export class SolutionsComponent implements OnInit {
 
   ngOnInit() {
     this.show += 1;
-    range(1, 16).pipe(
+    range(1, 25).pipe(
       concatMap((i) => of(i).pipe(delay(50)))
     ).subscribe((_) => { this.show += 1; });
   }
