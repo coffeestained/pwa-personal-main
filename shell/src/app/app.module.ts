@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RootComponent } from './layout/root/root.component';
 
 import { ModuleFederationService } from './services/module-federation.service';
-import { WelcomeSplashComponent } from './components/welcome-splash/welcome-splash.component';
+import { WelcomeSplashComponent } from './views/welcome-splash/welcome-splash.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { BodyComponent } from './layout/body/body.component';
@@ -15,11 +15,11 @@ import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.co
 import { LogoComponent } from './layout/logo/logo.component';
 
 import { MatIconModule } from '@angular/material/icon';
-import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
-import { SolutionsComponent } from './components/solutions/solutions.component';
-import { GetConnectedComponent } from './components/get-connected/get-connected.component';
-import { CardComponent } from './components/welcome-splash/card/card.component';
-import { ArchitectureComponent } from './components/architecture/architecture.component';
+import { ThemeToggleComponent } from './views/theme-toggle/theme-toggle.component';
+import { SolutionsComponent } from './views/solutions/solutions.component';
+import { GetConnectedComponent } from './views/get-connected/get-connected.component';
+import { CardComponent } from './views/welcome-splash/card/card.component';
+import { ArchitectureComponent } from './views/architecture/architecture.component';
 import { SharedDomEventDirective } from './directives/shared-dom-event.directive';
 
 @NgModule({

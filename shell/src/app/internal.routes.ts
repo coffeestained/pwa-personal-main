@@ -1,4 +1,4 @@
-import { WelcomeSplashComponent } from "./components/welcome-splash/welcome-splash.component";
+import { WelcomeSplashComponent } from "./views/welcome-splash/welcome-splash.component";
 
 export const routes = [
     {
