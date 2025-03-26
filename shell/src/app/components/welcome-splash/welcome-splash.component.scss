@@ -10,12 +10,11 @@
         display: grid;
         grid-template-columns: 150px 1fr;
 
-        @media screen and (max-width: $small) {
+        @media screen and (max-width: #{$small}) {
             grid-template-columns: 75px 1fr;
         }
 
         .welcome-splash__section {
-
             @keyframes blinking {
                 50% {
                   opacity: 0;
@@ -63,7 +62,7 @@
                 margin: 0;
                 color: var(--theme-text-opposite);
             }
-            @media screen and (max-width: $small) {
+            @media screen and (max-width: #{$small}) {
                 h1 {
                     margin: 0;
                     opacity: 0;
@@ -93,9 +92,9 @@
             display: flex;
             flex-wrap: wrap;
 
-            @media screen and (max-width: $small) {
-                width: auto;
-                left: -60px;
+            @media screen and (max-width: #{$small}) {
+                left: -75px;
+                width: 100vw;
             }
         }
 
@@ -139,7 +138,7 @@
         .welcome-splash__section-guide-text {
             text-align: center;
 
-            @media screen and (max-width: $small) {
+            @media screen and (max-width: #{$small}) {
                 font-size: .8rem;
             }
         }
@@ -204,9 +203,8 @@
         }
     }
 
-
     .welcome-splash__small-margin {
-        @media screen and (max-width: $small) {
+        @media screen and (max-width: #{$small}) {
             margin-left: 37.5px;
         }
     }
