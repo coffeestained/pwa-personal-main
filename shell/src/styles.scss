@@ -1,11 +1,18 @@
 @import "styles-theme-overrides";
 @import "styles-tailwind";
+@import "styles-constants";
 @import "./output.scss";
 
 /* You can add global styles to this file, and also import other style files */
 html {
-    font-size: 10px;
+    font-size: 16px;
     scroll-behavior: smooth;
+}
+
+@media screen and (max-width: #{$small}) {
+    html {
+        font-size: 11px;
+    }
 }
 
 * {
@@ -51,8 +58,8 @@ body {
 
 a {
     color: var(--theme-text-neutral);
-
     transition: color 250ms;
+    cursor: pointer;
 
     &:hover {
         color: var(--theme-text-color-two);
@@ -150,7 +157,11 @@ a {
 }
 
 .theme__logo {
-    font-family: "Quicksand";
+    font-family: "Quicksand Bold";
+}
+
+b {
+    font-family: "Quicksand Bold";
 }
 
 /**

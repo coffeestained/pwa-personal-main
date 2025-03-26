@@ -14,9 +14,12 @@
     }
 
     .architecture__box {
+        display: flex;
+        flex-direction: column;
         position: relative;
         flex: 1;
         width: 100%;
+        padding: 30px;
 
         &::before {
             content: "";
@@ -42,7 +45,11 @@
         .architecture__box-item {
             position: relative;
             padding: 4px;
-            justify-content: flex-end;
+            justify-content: flex-start;
+
+            b {
+                text-align: right;
+            }
         }
 
         .architecture__box-traffic {
@@ -60,10 +67,22 @@
 
         .architecture__box-commons {
             background-color: var(--theme-background-color);
+            display: flex;
+            flex-direction: column;
+
+            b {
+                text-align: right;
+            }
         }
 
         .architecture__box-component {
             background-color: var(--theme-background-color-two);
+            display: flex;
+            flex-direction: column;
+
+            b {
+                text-align: right;
+            }   
         }
     }
 

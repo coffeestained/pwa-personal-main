@@ -1,7 +1,10 @@
+@import '../../../styles-constants.scss';
+
 :host {
     display: flex;
     align-items: center;
-
+    flex-wrap: wrap;
+    
     > spa-button,
     > a {
         margin-right: 15px;
