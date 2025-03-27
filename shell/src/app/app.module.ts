@@ -15,7 +15,7 @@ import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.co
 import { LogoComponent } from './layout/logo/logo.component';
 
 import { MatIconModule } from '@angular/material/icon';
-import { ThemeToggleComponent } from './views/theme-toggle/theme-toggle.component';
+import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
 import { SolutionsComponent } from './views/solutions/solutions.component';
 import { GetConnectedComponent } from './views/get-connected/get-connected.component';
 import { CardComponent } from './views/welcome-splash/card/card.component';
