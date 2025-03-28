@@ -1,12 +1,23 @@
 {
 	"angularApp": {
 		"isActive": true,
-		"remoteEntry": "https://angular.tilliestudios.com/remoteEntry.js",
+		"remoteEntry": "http://localhost:4201/remoteEntry.js",
 		"exposedModule": "./MapsModule",
 		"displayName": "Maps",
 		"isNavigation": true,
 		"routePath": "maps",
 		"ngModuleName": "MapsModule",
+		"viaRoute": true,
+		"withInPage": false
+	}, 
+	"reactApp": {
+		"isActive": true,
+		"remoteEntry": "http://localhost:4202/remoteEntry.js",
+		"exposedModule": "./BuilderModule",
+		"displayName": "Builder",
+		"isNavigation": true,
+		"routePath": "builder",
+		"ngModuleName": "BuilderModule",
 		"viaRoute": true,
 		"withInPage": false
 	}
